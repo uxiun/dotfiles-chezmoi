@@ -1,3 +1,4 @@
+set -g GUIX_PROFILE /home/u/.guix-profile
 set -g GUIX_LOCPATH /home/u/.guix-profile/lib/locale
 
 		abbr -a aba abbr -a
@@ -35,6 +36,7 @@ abbr -a g git
 	abbr -a gk git switch
 		abbr -a gke git switch -
 	abbr -a ga git branch -vva
+	abbr -a gm --set-cursor "git add . && git commit -m '%'"
 # z command exists
 	abbr -a zj zellij
 	abbr -a za zellij a
@@ -58,6 +60,8 @@ abbr -a g git
 		abbr -a chk chezmoi -v apply
 		abbr -a chl chezmoi -v merge
 	abbr -a .l --position anywhere "| moar"
+	abbr -a .i --position anywhere install
+	abbr -a .a --position anywhere "| xargs -I{}"
 abbr -a b bat
 abbr -a j cd
 	abbr -a le moar
