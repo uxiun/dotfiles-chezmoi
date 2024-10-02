@@ -2,6 +2,8 @@ set -g GUIX_PROFILE /home/u/.guix-profile
 set -g GUIX_LOCPATH /home/u/.guix-profile/lib/locale
 
 		abbr -a aba abbr -a
+	abbr -a so source
+		abbr -a sof ~/.config/fish/config.fish
 	abbr -a do dotnet
 		abbr -a dor dotnet run
 		abbr -a dop dotnet paket
@@ -71,4 +73,8 @@ abbr -a m mkentries
 abbr -a , --set-cursor --position anywhere '~/%'
 		abbr -a pas sudo pacman -S
 	abbr -a ,e --position anywhere -- --help
+	abbr -a ,c --position anywhere -- /mnt/c/Users/itmik
+		abbr -a ,cs --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/%'
+		abbr -a ,cc --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/study/class/3f/%'
+		abbr -a ,cd --set-cursor --position anywhere -- /mnt/c/Users/itmik/Downloads/%
 	abbr -a gu guix
