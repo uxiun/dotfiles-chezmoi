@@ -1,9 +1,11 @@
+set -g DISPLAY 0
+set -g LIBGL_ALWAYS_INDIRECT 0
 set -g GUIX_PROFILE /home/u/.guix-profile
 set -g GUIX_LOCPATH /home/u/.guix-profile/lib/locale
 
 		abbr -a aba abbr -a
 	abbr -a so source
-		abbr -a sof ~/.config/fish/config.fish
+		abbr -a sof . ~/.config/fish/config.fish
 	abbr -a do dotnet
 		abbr -a dor dotnet run
 		abbr -a dop dotnet paket
@@ -78,3 +80,10 @@ abbr -a , --set-cursor --position anywhere '~/%'
 		abbr -a ,cc --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/study/class/3f/%'
 		abbr -a ,cd --set-cursor --position anywhere -- /mnt/c/Users/itmik/Downloads/%
 	abbr -a gu guix
+
+# pnpm
+set -gx PNPM_HOME "/home/u/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
