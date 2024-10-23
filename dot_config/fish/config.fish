@@ -96,7 +96,9 @@ abbr -a m mkentries
 		abbr -a nml pnpm lint
 abbr -a , --set-cursor --position anywhere '~/%'
 	abbr -a ,e --position anywhere -- --help
-	abbr -a ,c --position anywhere -- /mnt/c/Users/itmik
+	abbr -a ,s --set-cursor --position anywhere -- '~/school/class/%'
+		abbr -a ,sd --set-cursor --position anywhere -- '~/school/class/3f/%'
+	abbr -a ,c --set-cursor --position anywhere -- /mnt/c/Users/itmik/%
 		abbr -a ,cs --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/%'
 		abbr -a ,cc --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/study/class/3f/%'
 		abbr -a ,cd --set-cursor --position anywhere -- /mnt/c/Users/itmik/Downloads/%
