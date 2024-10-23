@@ -2,6 +2,9 @@ set -g DISPLAY 0
 set -g LIBGL_ALWAYS_INDIRECT 0
 set -g GUIX_PROFILE /home/u/.guix-profile
 set -g GUIX_LOCPATH /home/u/.guix-profile/lib/locale
+	abbr -a tr tree
+		abbr -a tru tree -gup
+		abbr -a trua tree -agup
 
 		abbr -a aba abbr -a
 	abbr -a so source
