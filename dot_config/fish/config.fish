@@ -1,7 +1,10 @@
-set -g DISPLAY 0
-set -g LIBGL_ALWAYS_INDIRECT 0
+# set -g LIBGL_ALWAYS_INDIRECT 0
 set -g GUIX_PROFILE /home/u/.guix-profile
 set -g GUIX_LOCPATH /home/u/.guix-profile/lib/locale
+# set -g DISPLAY \$(cat /etc/resolv.conf | grep nameserver | awk '{print \$2}'):0.0
+set -g DISPLAY `hostname`.mshome.net:0.0
+
+
 	abbr -a tr tree
 		abbr -a tru tree -gup
 		abbr -a trua tree -agup
@@ -83,6 +86,9 @@ abbr -a g git
 	abbr -a .i --position anywhere install
 	abbr -a .a --position anywhere "| xargs -I{}"
 abbr -a b bat
+	abbr -a ui uv pip install
+	abbr -a up uv pip
+		abbr -a uve uv venv
 abbr -a p sudo pacman
 	abbr -a pa pacman
 		abbr -a pas sudo pacman -S
