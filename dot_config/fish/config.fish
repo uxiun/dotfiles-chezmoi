@@ -18,6 +18,7 @@ set -g DISPLAY `hostname`.mshome.net:0.0
 			abbr -a dopr dotnet paket remove
 			abbr -a dopa dotnet paket add
 		abbr -a don dotnet new
+		abbr -a fdf fd -t f
 	abbr -a fj "fzf --preview 'bat --wrap=auto --style=numbers --color=always --line-range :500 {}
 if test 1 -eq 0
 else
@@ -58,6 +59,7 @@ abbr -a g git
 	abbr -a gj git switch
 		abbr -a gji git switch main
 		abbr -a gjk git switch -
+		abbr -a gjl git switch -c
 	abbr -a ga git branch -vva
 	abbr -a gm --set-cursor "git add . && git commit -m '%'"
 # z command exists
@@ -82,7 +84,8 @@ abbr -a g git
 		abbr -a chi chezmoi add
 		abbr -a chk chezmoi -v apply
 		abbr -a chl chezmoi -v merge
-	abbr -a .l --position anywhere "| moar"
+	abbr -a .l --position anywhere "|"
+	abbr -a .m --position anywhere "| moar"
 	abbr -a .i --position anywhere install
 	abbr -a .a --position anywhere "| xargs -I{}"
 abbr -a b bat
@@ -92,8 +95,10 @@ abbr -a b bat
 abbr -a p sudo pacman
 	abbr -a pa pacman
 		abbr -a pas sudo pacman -S
+		abbr -a pasyu sudo pacman -Syu
 abbr -a j cd
 	abbr -a le moar
+	abbr -a lg --set-cursor "ls | grep -E '/%/'"
 	abbr -a ll ls -l
 	abbr -a la ls -la
 abbr -a m mkentries
