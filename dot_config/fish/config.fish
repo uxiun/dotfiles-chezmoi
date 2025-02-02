@@ -66,6 +66,8 @@ abbr -a g git
 	abbr -a zj zellij
 	abbr -a za zellij a
 	abbr -a zf zellij -s
+	abbr -a re rbenv
+		abbr -a ree rbenv exec
 			abbr -a relogin exec /bin/fish -l
 			abbr -a -- relogin 'exec /bin/fish -l'
 	abbr -a ca cargo
@@ -123,3 +125,6 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# Added by `rbenv init` on Sun Feb  2 07:15:56 PM JST 2025
+status --is-interactive; and rbenv init - --no-rehash fish | source
