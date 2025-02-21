@@ -12,6 +12,7 @@ set -g DISPLAY `hostname`.mshome.net:0.0
 		abbr -a aba abbr -a
 	abbr -a so source
 		abbr -a sof . ~/.config/fish/config.fish
+		abbr -a sou source ~/.venv/bin/activate.fish # source uv
 	abbr -a do dotnet
 		abbr -a dor dotnet run
 		abbr -a dop dotnet paket
@@ -68,8 +69,11 @@ abbr -a g git
 	abbr -a zf zellij -s
 	abbr -a re rbenv
 		abbr -a ree rbenv exec
+		abbr -a reu rbenv exec bundle
+			abbr -a reui rbenv exec bundle install
 			abbr -a relogin exec /bin/fish -l
 			abbr -a -- relogin 'exec /bin/fish -l'
+	abbr -a ru ruby
 	abbr -a ca cargo
 		abbr -a car cargo remove
 		abbr -a caa cargo add
@@ -104,6 +108,7 @@ abbr -a j cd
 	abbr -a ll ls -l
 	abbr -a la ls -la
 abbr -a m mkentries
+	abbr -a mg /mnt/c/Users/itmik/0z/MassiGra045/MassiGra.exe
 	abbr -a npr npm run
 	abbr -a np npm
 	abbr -a nm pnpm
@@ -128,3 +133,5 @@ end
 
 # Added by `rbenv init` on Sun Feb  2 07:15:56 PM JST 2025
 status --is-interactive; and rbenv init - --no-rehash fish | source
+
+# source ~/.venv/bin/activate.fish
