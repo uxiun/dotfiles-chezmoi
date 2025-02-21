@@ -12,7 +12,6 @@ set -g DISPLAY `hostname`.mshome.net:0.0
 		abbr -a aba abbr -a
 	abbr -a so source
 		abbr -a sof . ~/.config/fish/config.fish
-		abbr -a sou source ~/.venv/bin/activate.fish # source uv
 	abbr -a do dotnet
 		abbr -a dor dotnet run
 		abbr -a dop dotnet paket
@@ -134,4 +133,4 @@ end
 # Added by `rbenv init` on Sun Feb  2 07:15:56 PM JST 2025
 status --is-interactive; and rbenv init - --no-rehash fish | source
 
-# source ~/.venv/bin/activate.fish
+source ~/.venv/bin/activate.fish
