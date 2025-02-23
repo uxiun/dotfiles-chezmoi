@@ -1,0 +1,41 @@
+find.global : {e} a
+find : {e} a
+find abilities
+find Pretty
+find Pattern
+find builtin
+ls lib.base.abilities
+find : {e} a -> b
+find : {e f} a -> {} b
+view Store
+find map
+ls Function
+ls
+docs Ask
+display lib.base.abilities.Ask
+display lib.base.abilities.Ask
+display Ask
+docs 1
+display 1
+find Ask
+?
+find Ask
+display 2
+display 1
+find Requ
+ls
+find index
+find split
+find takewhile
+find head!
+find head
+ls lib.base.Text
+find split
+find sum
+find Tuple
+ui
+ui
+ui
+ui
+projects
+ui
