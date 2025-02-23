@@ -1,9 +1,14 @@
 # set -g LIBGL_ALWAYS_INDIRECT 0
-set -g GUIX_PROFILE /home/u/.guix-profile
-set -g GUIX_LOCPATH /home/u/.guix-profile/lib/locale
+set -g GUIX_PROFILE ~/.guix-profile
+set -g GUIX_LOCPATH ~/.guix-profile/lib/locale
 # set -g DISPLAY \$(cat /etc/resolv.conf | grep nameserver | awk '{print \$2}'):0.0
-set -g DISPLAY `hostname`.mshome.net:0.0
+# set -g DISPLAY `hostname`.mshome.net:0.0
 
+set -g PAGER moar
+set -g MOAR -wrap
+set -g PARU_CONF ~/.config/paru/paru.conf
+
+fish_add_path -g ~/nora/
 
 	abbr -a tr tree
 		abbr -a tru tree -gup
@@ -82,7 +87,6 @@ abbr -a g git
 		abbr -a caf cargo +nightly fmt
 		abbr -a coa --set-cursor "echo 'abbr -a %' >> ~/.config/fish/config.fish"
 			abbr -a confi --set-cursor "echo \"%\" >> ~/.config/fish/config.fish"
-			abbr -a --set-cursor='%' -- confi 'echo "%" >> ~/.config/fish/config.fish'
 	abbr -a ch chezmoi
 		abbr -a chd chezmoi -v diff
 		abbr -a chc chezmoi cd
@@ -90,7 +94,7 @@ abbr -a g git
 		abbr -a chk chezmoi -v apply
 		abbr -a chl chezmoi -v merge
 	abbr -a .l --position anywhere "|"
-	abbr -a .m --position anywhere "| moar"
+	abbr -a .m --position anywhere "| $PAGER"
 	abbr -a .i --position anywhere install
 	abbr -a .a --position anywhere "| xargs -I{}"
 abbr -a b bat
@@ -102,7 +106,7 @@ abbr -a p sudo pacman
 		abbr -a pas sudo pacman -S
 		abbr -a pasyu sudo pacman -Syu
 abbr -a j cd
-	abbr -a le moar
+	abbr -a le $PAGER
 	abbr -a lg --set-cursor "ls | grep -E '/%/'"
 	abbr -a ll ls -l
 	abbr -a la ls -la
@@ -124,13 +128,13 @@ abbr -a , --set-cursor --position anywhere '~/%'
 		abbr -a ,cd --set-cursor --position anywhere -- /mnt/c/Users/itmik/Downloads/%
 
 # pnpm
-set -gx PNPM_HOME "/home/u/.local/share/pnpm"
+set -gx PNPM_HOME "~/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
 
 # Added by `rbenv init` on Sun Feb  2 07:15:56 PM JST 2025
-status --is-interactive; and rbenv init - --no-rehash fish | source
+# status --is-interactive; and rbenv init - --no-rehash fish | source
 
-source ~/.venv/bin/activate.fish
+# source ~/.venv/bin/activate.fish
