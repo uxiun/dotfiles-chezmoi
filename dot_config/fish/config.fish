@@ -7,6 +7,7 @@ set -g GUIX_LOCPATH ~/.guix-profile/lib/locale
 set -g PAGER moar
 set -g MOAR -wrap
 set -g PARU_CONF ~/.config/paru/paru.conf
+set -g UCM_WEB_UI ~/nora/unison/ui
 
 fish_add_path -g ~/nora/
 
