@@ -16,15 +16,25 @@ fish_add_path -g ~/bin/
 		abbr -a tru tree -gup
 		abbr -a trua tree -agup
 
-		abbr -a aba abbr -a
+		abbr -a ais apt search
+		abbr -a ail apt list
+abbr -a s sudo
+	abbr -a sa sudo apt
+		abbr -a sar sudo apt remove
+		abbr -a saa sudo apt autoremove
+		abbr -a sau sudo apt upgrade
+		abbr -a sad sudo apt update
+	abbr -a si sudo apt install
 	abbr -a so source
 		abbr -a sof . ~/.config/fish/config.fish
+
 	abbr -a do dotnet
 		abbr -a dor dotnet run
 		abbr -a dop dotnet paket
 			abbr -a dopr dotnet paket remove
 			abbr -a dopa dotnet paket add
 		abbr -a don dotnet new
+
 		abbr -a fdf fd -t f
 	abbr -a fj "fzf --preview 'bat --wrap=auto --style=numbers --color=always --line-range :500 {}
 if test 1 -eq 0
@@ -33,9 +43,6 @@ else
 end
 ' --preview-window 'up,64%' --bind 'ctrl-d:change-prompt(dir> )+reload(fd -t d),ctrl-f:change-prompt(file> )+reload(fd -t f),ctrl-x:change-prompt(file(executable)> )+reload(fd -t x)+preview(echo {})'"
 
-abbr -a s sudo
-	abbr -a sa sudo apt
-		abbr -a sai sudo apt install
 abbr -a g git
 	abbr -a gw git branch
 	abbr -a gz git log
