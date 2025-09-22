@@ -4,10 +4,10 @@ set -g GUIX_LOCPATH ~/.guix-profile/lib/locale
 # set -g DISPLAY \$(cat /etc/resolv.conf | grep nameserver | awk '{print \$2}'):0.0
 # set -g DISPLAY `hostname`.mshome.net:0.0
 
-set -g PAGER moar
-set -g MOAR -wrap
-set -g PARU_CONF ~/.config/paru/paru.conf
-set -g UCM_WEB_UI ~/nora/unison/ui
+set -gx PAGER /usr/local/bin/moor
+set -gx MOOR "-wrap -colors auto"
+set -gx PARU_CONF ~/.config/paru/paru.conf
+set -gx UCM_WEB_UI ~/nora/unison/ui
 
 fish_add_path -g ~/nora/
 fish_add_path -g ~/bin/
@@ -102,11 +102,11 @@ abbr -a g git
 	abbr -a ch chezmoi
 		abbr -a che chezmoi edit
 		abbr -a chef chezmoi edit ~/.config/fish/config.fish
-		abbr -a chd chezmoi diff
+		abbr -a chd "chezmoi diff | $PAGER"
 		abbr -a chn chezmoi forget
 		abbr -a chc chezmoi cd
 		abbr -a chi chezmoi add
-		abbr -a chk chezmoi -v apply
+		abbr -a chk chezmoi apply
 		abbr -a chl chezmoi merge
 		abbr -a chla chezmoi merge-all
 	abbr -a .f --position anywhere "~/.config/fish/config.fish"
