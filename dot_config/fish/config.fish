@@ -93,11 +93,16 @@ abbr -a g git
 		abbr -a coa --set-cursor "echo 'abbr -a %' >> ~/.config/fish/config.fish"
 			abbr -a confi --set-cursor "echo \"%\" >> ~/.config/fish/config.fish"
 	abbr -a ch chezmoi
-		abbr -a chd chezmoi -v diff
+		abbr -a che chezmoi edit
+		abbr -a chef chezmoi edit ~/.config/fish/config.fish
+		abbr -a chd chezmoi diff
+		abbr -a chn chezmoi forget
 		abbr -a chc chezmoi cd
 		abbr -a chi chezmoi add
 		abbr -a chk chezmoi -v apply
-		abbr -a chl chezmoi -v merge
+		abbr -a chl chezmoi merge
+		abbr -a chla chezmoi merge-all
+	abbr -a .f --position anywhere "~/.config/fish/config.fish"
 	abbr -a .l --position anywhere "|"
 	abbr -a .m --position anywhere "| $PAGER"
 	abbr -a .i --position anywhere install
@@ -142,4 +147,5 @@ end
 # Added by `rbenv init` on Sun Feb  2 07:15:56 PM JST 2025
 # status --is-interactive; and rbenv init - --no-rehash fish | source
 
-# source ~/.venv/bin/activate.fish
+zoxide init fish | source
+
