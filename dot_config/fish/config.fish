@@ -23,10 +23,16 @@ abbr -a s sudo
 		abbr -a sar sudo apt remove
 		abbr -a saa sudo apt autoremove
 		abbr -a sau sudo apt upgrade
+		abbr -a sai sudo apt install
 		abbr -a sad sudo apt update
-	abbr -a si sudo apt install
+	abbr -a si sudo nala install
 	abbr -a so source
 		abbr -a sof . ~/.config/fish/config.fish
+	abbr -a sn sudo nala
+		abbr -a snr sudo nala remove
+		abbr -a sna sudo nala autoremove
+		abbr -a snu sudo nala upgrade
+		abbr -a snd sudo nala update
 
 	abbr -a do dotnet
 		abbr -a dor dotnet run
