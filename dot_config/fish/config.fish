@@ -33,9 +33,9 @@ else
 end
 ' --preview-window 'up,64%' --bind 'ctrl-d:change-prompt(dir> )+reload(fd -t d),ctrl-f:change-prompt(file> )+reload(fd -t f),ctrl-x:change-prompt(file(executable)> )+reload(fd -t x)+preview(echo {})'"
 
-
-abbr -a sa sudo apt
-	abbr -a sai sudo apt install
+abbr -a s sudo
+	abbr -a sa sudo apt
+		abbr -a sai sudo apt install
 abbr -a g git
 	abbr -a gw git branch
 	abbr -a gz git log
