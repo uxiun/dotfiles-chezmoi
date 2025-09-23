@@ -6,6 +6,7 @@ set -gx MOOR "-wrap -colors auto"
 
 set -gx PARU_CONF ~/.config/paru/paru.conf
 set -gx UCM_WEB_UI ~/nora/unison/ui
+set -gx VOLTA_HOME ~/.volta
 
 
 fish_add_path -g ~/nora/
@@ -13,6 +14,7 @@ fish_add_path -g ~/bin/
 fish_add_path -g ~/i/emsdk
 fish_add_path -g ~/i/emsdk/upstream/emscripten
 fish_add_path -g ~/i/emsdk/node/22.16.0_64bit/bin
+fish_add_path -g $VOLTA_HOME/bin
 
 	abbr -a tr tree
 		abbr -a tru tree -gup
@@ -148,8 +150,8 @@ abbr -a m mkentries
 	abbr -a npr npm run
 	abbr -a np npm
 	abbr -a nm pnpm
-			abbr -a nmid pnpm i -D
 		abbr -a nmd pnpm dev
+		abbr -a nmi pnpm i -D
 		abbr -a nml pnpm lint
 abbr -a , --set-cursor --position anywhere '~/%'
 	abbr -a ,e --position anywhere -- --help
@@ -159,6 +161,8 @@ abbr -a , --set-cursor --position anywhere '~/%'
 		abbr -a ,cs --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/%'
 		abbr -a ,cc --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/study/class/3f/%'
 		abbr -a ,cd --set-cursor --position anywhere -- /mnt/c/Users/itmik/Downloads/%
+
+	abbr -a vt volta
 
 # pnpm
 set -gx PNPM_HOME "~/.local/share/pnpm"
