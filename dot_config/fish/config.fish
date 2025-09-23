@@ -108,7 +108,7 @@ abbr -a g git
 	abbr -a ch chezmoi
 		abbr -a che chezmoi edit
 		abbr -a chef chezmoi edit ~/.config/fish/config.fish
-		abbr -a chd "chezmoi diff | $PAGER"
+		abbr -a chd "chezmoi diff"
 		abbr -a chn chezmoi forget
 		abbr -a chc chezmoi cd
 		abbr -a chi chezmoi add
@@ -135,6 +135,10 @@ abbr -a j cd
 	abbr -a la ls -la
 abbr -a m mkentries
 	abbr -a mg /mnt/c/Users/itmik/0z/MassiGra045/MassiGra.exe
+
+	abbr -a nl nala
+		abbr -a nld nala list
+		abbr -a nls nala search
 	abbr -a npr npm run
 	abbr -a np npm
 	abbr -a nm pnpm
