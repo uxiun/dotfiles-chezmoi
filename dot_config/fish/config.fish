@@ -25,9 +25,13 @@ abbr -a s sudo
 	abbr -a sa sudo apt
 		abbr -a sar sudo apt remove
 		abbr -a saa sudo apt autoremove
+		abbr -a sag sudo apt-get
 		abbr -a sau sudo apt upgrade
 		abbr -a sai sudo apt install
 		abbr -a sad sudo apt update
+	# abbr -a sg
+		abbr -a sgi sudo apt-get install
+		abbr -a sgd sudo apt-get update
 	abbr -a si sudo nala install
 	abbr -a so source
 		abbr -a sof . ~/.config/fish/config.fish
