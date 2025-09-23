@@ -1,13 +1,12 @@
-# set -g LIBGL_ALWAYS_INDIRECT 0
 set -g GUIX_PROFILE ~/.guix-profile
 set -g GUIX_LOCPATH ~/.guix-profile/lib/locale
-# set -g DISPLAY \$(cat /etc/resolv.conf | grep nameserver | awk '{print \$2}'):0.0
-# set -g DISPLAY `hostname`.mshome.net:0.0
 
 set -gx PAGER /usr/local/bin/moor
 set -gx MOOR "-wrap -colors auto"
+
 set -gx PARU_CONF ~/.config/paru/paru.conf
 set -gx UCM_WEB_UI ~/nora/unison/ui
+
 
 fish_add_path -g ~/nora/
 fish_add_path -g ~/bin/
