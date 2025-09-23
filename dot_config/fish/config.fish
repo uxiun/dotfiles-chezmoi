@@ -11,6 +11,9 @@ set -gx UCM_WEB_UI ~/nora/unison/ui
 
 fish_add_path -g ~/nora/
 fish_add_path -g ~/bin/
+fish_add_path -g ~/i/emsdk
+fish_add_path -g ~/i/emsdk/upstream/emscripten
+fish_add_path -g ~/i/emsdk/node/22.16.0_64bit/bin
 
 	abbr -a tr tree
 		abbr -a tru tree -gup
@@ -165,4 +168,3 @@ end
 # status --is-interactive; and rbenv init - --no-rehash fish | source
 
 zoxide init fish | source
-
