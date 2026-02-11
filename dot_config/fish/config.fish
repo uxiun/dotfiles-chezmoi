@@ -1,7 +1,7 @@
 set -g GUIX_PROFILE ~/.guix-profile
 set -g GUIX_LOCPATH ~/.guix-profile/lib/locale
 
-set -gx PAGER /usr/local/bin/moor
+set -gx PAGER moor
 set -gx MOOR "-wrap -colors auto"
 
 set -gx PARU_CONF ~/.config/paru/paru.conf
@@ -137,6 +137,8 @@ abbr -a p sudo pacman
 		abbr -a pas sudo pacman -S
 		abbr -a pasyu sudo pacman -Syu
 abbr -a j cd
+	abbr -a jk cd ..
+
 	abbr -a le $PAGER
 	abbr -a lg --set-cursor "ls | grep -E '/%/'"
 	abbr -a ll ls -l
@@ -150,7 +152,10 @@ abbr -a m mkentries
 	abbr -a npr npm run
 	abbr -a np npm
 	abbr -a nm pnpm
+		abbr -a nme pnpm exec
 		abbr -a nmd pnpm dev
+		abbr -a nmf pnpm exec biome format --write
+		abbr -a nmc pnpm exec biome check --write
 		abbr -a nmi pnpm i -D
 		abbr -a nml pnpm lint
 abbr -a , --set-cursor --position anywhere '~/%'
