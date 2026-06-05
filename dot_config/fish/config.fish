@@ -15,6 +15,7 @@ fish_add_path -g ~/i/emsdk
 fish_add_path -g ~/i/emsdk/upstream/emscripten
 fish_add_path -g ~/i/emsdk/node/22.16.0_64bit/bin
 fish_add_path -g $VOLTA_HOME/bin
+fish_add_path -g ~/i/ucm-linux-x64
 
 	abbr -a tr tree
 		abbr -a tru tree -gup
