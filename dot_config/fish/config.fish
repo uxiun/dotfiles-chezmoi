@@ -16,6 +16,7 @@ fish_add_path -g ~/i/emsdk/upstream/emscripten
 fish_add_path -g ~/i/emsdk/node/22.16.0_64bit/bin
 fish_add_path -g $VOLTA_HOME/bin
 fish_add_path -g ~/i/ucm-linux-x64
+fish_add_path -g ~/.elan/bin
 
 	abbr -a tr tree
 		abbr -a tru tree -gup
@@ -163,9 +164,10 @@ abbr -a , --set-cursor --position anywhere '~/%'
 	abbr -a ,e --position anywhere -- --help
 	abbr -a ,s --set-cursor --position anywhere -- '~/school/class/%'
 		abbr -a ,sd --set-cursor --position anywhere -- '~/school/class/3f/%'
+	abbr -a ,d --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive/%'
+		abbr -a ,df --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/%'
+		abbr -a ,ds --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/study/%'
 	abbr -a ,c --set-cursor --position anywhere -- /mnt/c/Users/itmik/%
-		abbr -a ,cs --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/%'
-		abbr -a ,cc --set-cursor --position anywhere -- '/mnt/c/Users/itmik/OneDrive\ -\ 筑波大学/study/class/3f/%'
 		abbr -a ,cd --set-cursor --position anywhere -- /mnt/c/Users/itmik/Downloads/%
 
 	abbr -a vt volta
